@@ -8,7 +8,7 @@
 
 - name: Add Repository URL
   apt_repository:
-    repo: "{{ _zuku_jdk.apt_repo.repo_line }}"
+    repo: "{{ _zulu_jdk.apt_repo.repo_line }}"
     state: present
 
 - name: Install JDK
