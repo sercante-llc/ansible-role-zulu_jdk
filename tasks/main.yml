@@ -3,7 +3,7 @@
 - name: Add Repository Key by ID
   apt_key:
     id: "{{ _zulu_jdk.apt_repo.key_id }}"
-    keyserver: "{{ item.key_server | default('keyserver.ubuntu.com')  }}"
+    keyserver: "{{ _zulu_jdk.apt_repo.key_server | default('keyserver.ubuntu.com')  }}"
     state: present
 
 - name: Add Repository URL
