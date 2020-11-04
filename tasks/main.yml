@@ -15,6 +15,7 @@
   apt:
     state: latest
     name: "{{ _zulu_jdk.package_name }}"
+    update_cache: true
 
 - name: "Set security setting for DNS cache ttl"
   lineinfile:
