@@ -11,11 +11,16 @@
     repo: "{{ _zulu_jdk.apt_repo.repo_line }}"
     state: present
 
-- name: Install JDK
+- name: Install Zulu Repo
+  apt:
+    state: latest
+    name: "zulu-repo"
+
+- name: Install Zulu JDK
   apt:
     state: latest
     name: "{{ _zulu_jdk.package_name }}"
-    update_cache: true
+    update_cache: yes
 
 - name: "Set security setting for DNS cache ttl"
   lineinfile:
