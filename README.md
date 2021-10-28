@@ -3,7 +3,7 @@ Azul Zulu JDK
 
 This role downloads and installs an Azul Zulu JDK and sets it up as the default JDK on Ubuntu. The .deb files come from [Azul Systems](https://zulu.org).
 
-[![Build Status](https://travis-ci.org/Rheinwerk/ansible-role-zulu_jdk.svg?branch=master)](https://travis-ci.org/Rheinwerk/ansible-role-zulu_jdk)
+[![Build Status](https://github.com/Rheinwerk/ansible-role-zulu_jdk/actions/workflows/ci.yml/badge.svg)](https://github.com/Rheinwerk/ansible-role-zulu_jdk/actions/workflows/ci.yml)
 
 Requirements
 ------------
