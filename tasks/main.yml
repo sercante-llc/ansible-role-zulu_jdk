@@ -24,12 +24,12 @@
 
 - name: "Set security setting for DNS cache ttl"
   lineinfile:
-    path: "{{ _zulu_jdk.install_dir }}/{{ 'conf' if _zulu_jdk.package_name == 'zulu-11' else 'jre/lib' }}/security/java.security"
+    path: "{{ _zulu_jdk.install_dir }}/{{ 'jre/lib' if _zulu_jdk.package_name == 'zulu-8' else 'conf' }}/security/java.security"
     regexp: '^(.*)networkaddress.cache.ttl=(.*)$'
     line: "networkaddress.cache.ttl={{ _zulu_jdk.security.dns_cache_ttl }}"
 
 - name: "Set security setting for DNS cache negative ttl"
   lineinfile:
-    path: "{{ _zulu_jdk.install_dir }}/{{ 'conf' if _zulu_jdk.package_name == 'zulu-11' else 'jre/lib' }}/security/java.security"
+    path: "{{ _zulu_jdk.install_dir }}/{{ 'jre/lib' if _zulu_jdk.package_name == 'zulu-8' else 'conf' }}/security/java.security"
     regexp: '^(.*)networkaddress.cache.negative.ttl=(.*)$'
     line: "networkaddress.cache.negative.ttl={{ _zulu_jdk.security.dns_cache_negative_ttl }}"
